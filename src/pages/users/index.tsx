@@ -1,6 +1,7 @@
 import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Th, Thead, Tr, Text } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
+import { Pager } from "../../components/Pager";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
@@ -62,8 +63,56 @@ export default function UserList() {
                 </Button>
                 </Td>
               </Tr>
+              <Tr>
+                <Td>
+                  <Checkbox colorScheme='pink' />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight='bold'>Nicholas Wagner</Text>
+                    <Text fontSize='sm' color='gray.300'>nclwgn@gmail.com</Text>
+                  </Box>
+                </Td>
+                <Td>02 de Abril, 2022</Td>
+                <Td>
+                <Button
+                  as='a'
+                  size='sm'
+                  fontSize='sm'
+                  colorScheme='purple'
+                  leftIcon={<Icon as={RiPencilLine} fontSize='16' />}
+                >
+                  Editar
+                </Button>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  <Checkbox colorScheme='pink' />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight='bold'>Nicholas Wagner</Text>
+                    <Text fontSize='sm' color='gray.300'>nclwgn@gmail.com</Text>
+                  </Box>
+                </Td>
+                <Td>02 de Abril, 2022</Td>
+                <Td>
+                <Button
+                  as='a'
+                  size='sm'
+                  fontSize='sm'
+                  colorScheme='purple'
+                  leftIcon={<Icon as={RiPencilLine} fontSize='16' />}
+                >
+                  Editar
+                </Button>
+                </Td>
+              </Tr>
             </Tbody>
           </Table>
+
+          <Pager />
         </Box>
       </Flex>
     </Box>
