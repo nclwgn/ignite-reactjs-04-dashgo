@@ -4,7 +4,7 @@ import { PagerItem } from "./PagerItem";
 export function Pager() {
   return (
     <Stack
-      direction='row'
+      direction={['column', 'row']}
       mt='8'
       justify='space-between'
       align='center'
