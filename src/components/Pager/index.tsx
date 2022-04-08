@@ -1,4 +1,5 @@
-import { Box, Button, Stack } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
+import { PagerItem } from "./PagerItem";
 
 export function Pager() {
   return (
@@ -16,52 +17,11 @@ export function Pager() {
         direction='row'
         spacing='2'
       >
-        <Button
-          size='sm'
-          fontSize='xs'
-          width='4'
-          colorScheme='pink'
-          disabled
-          _disabled={{
-            bg: 'pink:500',
-            cursor: 'default'
-          }}
-        >
-          1
-        </Button>
-        <Button
-          size='sm'
-          fontSize='xs'
-          width='4'
-          bg='gray.700'
-          _hover={{
-            bg: 'gray.500'
-          }}
-        >
-          2
-        </Button>
-        <Button
-          size='sm'
-          fontSize='xs'
-          width='4'
-          bg='gray.700'
-          _hover={{
-            bg: 'gray.500'
-          }}
-        >
-          3
-        </Button>
-        <Button
-          size='sm'
-          fontSize='xs'
-          width='4'
-          bg='gray.700'
-          _hover={{
-            bg: 'gray.500'
-          }}
-        >
-          4
-        </Button>
+        <PagerItem number={1} isCurrent />
+        <PagerItem number={2} />
+        <PagerItem number={3} />
+        <PagerItem number={4} />
+        <PagerItem number={5} />
       </Stack>
     </Stack>
   );
