@@ -82,7 +82,11 @@ export default function UserList() {
                 </Tbody>
               </Table>
 
-              <Pager />
+              <Pager
+                totalRegisterCount={200}
+                currentPage={5}
+                onPageChange={(_) => (null)}
+              />
             </>
           ) }
         </Box>
