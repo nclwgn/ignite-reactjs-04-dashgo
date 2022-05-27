@@ -50,27 +50,27 @@ export function Pager({
       >
         {currentPage > (1 + siblingsCount) && (
           <>
-            <PagerItem number={1} />
+            <PagerItem number={1} onPageChange={onPageChange} />
             { currentPage > (2 + siblingsCount) &&
               <Text color='gray.300' textAlign='center' width='8'>...</Text> }
           </>
         )}
 
         {previousPages.length > 0 && previousPages.map(page => (
-          <PagerItem key={page} number={page} />
+          <PagerItem key={page} number={page} onPageChange={onPageChange} />
         ))}
 
-        <PagerItem number={currentPage} isCurrent />
+        <PagerItem number={currentPage} isCurrent onPageChange={onPageChange} />
 
         {nextPages.length > 0 && nextPages.map(page => (
-          <PagerItem key={page} number={page} />
+          <PagerItem key={page} number={page} onPageChange={onPageChange} />
         ))}
 
         {(currentPage + siblingsCount) < lastPage && (
           <>
             { (currentPage + 1 + siblingsCount) < lastPage &&
               <Text color='gray.300' textAlign='center' width='8'>...</Text> }
-            <PagerItem number={lastPage} />
+            <PagerItem number={lastPage} onPageChange={onPageChange} />
           </>
         )}
       </Stack>

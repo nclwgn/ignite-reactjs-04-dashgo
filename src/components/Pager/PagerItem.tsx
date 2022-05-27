@@ -3,11 +3,13 @@ import { Button } from "@chakra-ui/react";
 interface PagerItemProps {
   isCurrent?: boolean;
   number: number;
+  onPageChange: (page: number) => void;
 }
 
 export function PagerItem({
   isCurrent = false,
-  number
+  number,
+  onPageChange
 }: PagerItemProps) {
   if (isCurrent) {
     return (
@@ -36,6 +38,7 @@ export function PagerItem({
       _hover={{
         bg: 'gray.500'
       }}
+      onClick={() => onPageChange(number)}
     >
       {number}
     </Button>
